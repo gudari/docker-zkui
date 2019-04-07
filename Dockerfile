@@ -1,4 +1,4 @@
-FROM gudari/java:8u191-b12 AS BUILD
+FROM gudari/java:8u201-b09 AS BUILD
 
 ARG ZKUI_VERSION=2.0-SNAPSHOT
 ENV ZKUI_BUILD_PATH=/opt/zkui-build
@@ -9,7 +9,7 @@ RUN buildDep="git maven" && \
     cd ${ZKUI_BUILD_PATH} && \
     mvn clean install
 
-FROM gudari/java:8u191-b12
+FROM gudari/java:8u201-b09
 
 ARG ZKUI_VERSION=2.0-SNAPSHOT
 ENV ZKUI_BUILD_PATH=/opt/zkui-build
